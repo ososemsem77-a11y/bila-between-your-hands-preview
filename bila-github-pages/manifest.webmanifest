@@ -1,0 +1,15 @@
+{
+  "name": "بيلا بين إيديك — دليل مدينة ومركز بيلا",
+  "short_name": "دليل بيلا",
+  "description": "دليل رقمي مجتمعي للخدمات والأماكن في بيلا، كفر الشيخ.",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f9f8f2",
+  "theme_color": "#123d35",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

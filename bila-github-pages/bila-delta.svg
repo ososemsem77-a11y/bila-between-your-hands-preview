@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">رسم توضيحي لأراضي دلتا النيل</title>
+  <desc id="desc">حقول خضراء وقناة ماء تحت سماء دافئة، في مشهد فني مستوحى من ريف الدلتا.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#a9c9c5"/><stop offset=".72" stop-color="#f0d6a6"/><stop offset="1" stop-color="#e7c88e"/></linearGradient>
+    <linearGradient id="field" x2="0" y2="1"><stop stop-color="#8eaf78"/><stop offset="1" stop-color="#416f54"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#c1ddd3"/><stop offset="1" stop-color="#6d9e91"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#fff4ce"/><stop offset="1" stop-color="#f1c979" stop-opacity=".1"/></radialGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <circle cx="900" cy="190" r="160" fill="url(#sun)"/><circle cx="900" cy="190" r="70" fill="#f6dda4"/>
+  <path d="M0 390 Q180 340 350 386T700 370T1200 380V760H0Z" fill="#c6d1a0"/>
+  <path d="M0 448 Q170 414 390 449T790 430T1200 448V760H0Z" fill="url(#field)"/>
+  <path d="M-60 616 C180 514 335 690 565 600S955 505 1260 620V790H-60Z" fill="url(#water)"/>
+  <path d="M-50 631 C200 535 332 706 560 615S960 522 1260 636" fill="none" stroke="#e2eee1" stroke-width="15" opacity=".8"/>
+  <g fill="#426e52" opacity=".95">
+    <path d="M80 450v-92h55v92zM68 367l39-38 41 38z"/><path d="M157 448v-76h44v76zM149 380l30-30 30 30z"/>
+    <path d="M1010 432v-105h63v105zM1000 339l41-47 43 47z"/><path d="M1086 432v-77h45v77zM1078 365l31-33 31 33z"/>
+  </g>
+  <g fill="none" stroke="#d6d9a5" stroke-width="6" opacity=".72">
+    <path d="M40 510Q250 450 420 503T800 492"/><path d="M20 548Q240 484 438 545T850 526"/><path d="M670 470Q920 416 1170 485"/><path d="M635 515Q900 451 1195 532"/>
+  </g>
+  <g fill="#315f49"><circle cx="265" cy="388" r="22"/><circle cx="292" cy="384" r="25"/><circle cx="320" cy="394" r="19"/><rect x="287" y="397" width="8" height="45"/></g>
+  <g fill="#f8f4e6" opacity=".55"><path d="M180 140q35-28 70 0q32-26 67 0h-137z"/><path d="M430 206q28-22 56 0q25-22 52 0h-108z"/></g>
+  <path d="M0 736Q310 704 580 738T1200 722V760H0Z" fill="#315f49" opacity=".4"/>
+</svg>

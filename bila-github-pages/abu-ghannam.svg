@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">رسم توضيحي لمعمار مسجد تاريخي</title>
+  <desc id="desc">واجهة فنية لمسجد بقبة وثلاثة أروقة، مستوحاة من العمارة الإسلامية التاريخية في الدلتا. ليست صورة فوتوغرافية للمسجد.</desc>
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#edddb9"/><stop offset="1" stop-color="#c2a374"/></linearGradient>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#9fc0bd"/><stop offset="1" stop-color="#e8d7b0"/></linearGradient>
+    <linearGradient id="shadow" x2="0" y2="1"><stop stop-color="#846e52"/><stop offset="1" stop-color="#544c3e"/></linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <circle cx="930" cy="145" r="65" fill="#f6dfaa" opacity=".9"/>
+  <path d="M0 610h1200v150H0z" fill="#8da17d"/>
+  <path d="M154 650V372q0-20 20-20h852q20 0 20 20v278z" fill="url(#wall)" stroke="#9b815d" stroke-width="9"/>
+  <path d="M132 377h936l-36-53H168z" fill="#b79565"/>
+  <path d="M424 324q0-170 176-215 176 45 176 215z" fill="#d8bd8d" stroke="#947651" stroke-width="10"/>
+  <path d="M576 108h48M590 82h20M600 65v-32" stroke="#947651" stroke-width="10" stroke-linecap="round"/>
+  <path d="M219 350v-88q0-63 62-63t62 63v88M538 350v-101q0-73 62-73t62 73v101M857 350v-88q0-63 62-63t62 63v88" fill="url(#shadow)" stroke="#a4885e" stroke-width="11"/>
+  <g fill="#ead8b3" opacity=".9"><path d="M259 282q0-22 22-22t22 22v68h-44z"/><path d="M572 270q0-27 28-27t28 27v80h-56z"/><path d="M897 282q0-22 22-22t22 22v68h-44z"/></g>
+  <path d="M364 650V515q0-67 68-67t68 67v135M700 650V515q0-67 68-67t68 67v135" fill="url(#shadow)" stroke="#a4885e" stroke-width="10"/>
+  <path d="M142 393h916M166 636h868" stroke="#f5e8c9" stroke-width="8" opacity=".55"/>
+  <g fill="#52715a"><path d="M75 650v-82h17v82zM52 581q32-48 63 0q-30 8-63 0z"/><path d="M1092 650v-99h20v99zM1066 564q37-53 73 0q-37 8-73 0z"/></g>
+  <path d="M0 688q250-36 460 0t740-4v76H0z" fill="#d8c39a" opacity=".55"/>
+  <text x="600" y="724" text-anchor="middle" fill="#fff7e6" font-family="Tahoma, sans-serif" font-size="26" font-weight="700">رسم توضيحي — ليس صورة فوتوغرافية</text>
+</svg>

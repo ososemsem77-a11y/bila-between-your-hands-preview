@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123d35">
+  <meta name="description" content="دليلك الرقمي لمدينة ومركز بيلا: اكتشف الخدمات والأماكن، ابحث عن الأقرب إليك، وافتح الاتجاهات بسهولة.">
+  <title>بيلا بين إيديك — امسح، اكتشف، وصل</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="بيلا بين إيديك، الرئيسية">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 4c-9 0-16 7-16 16 0 12 16 24 16 24s16-12 16-24C40 11 33 4 24 4Z"/><circle cx="24" cy="20" r="6"/></svg></span>
+      <span><strong>بيلا بين إيديك</strong><small>امسح • اكتشف • وصل</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+      <a href="#home" class="active">الرئيسية</a><a href="#directory">الدليل</a><a href="#map-section">الخريطة</a><a href="#discover">اكتشف بيلا</a>
+    </nav>
+    <div class="top-actions">
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="تبديل الوضع الليلي" title="الوضع الليلي"><span>◐</span></button>
+      <button id="share-site" class="share-top" type="button"><span aria-hidden="true">↗</span> شارك الدليل</button>
+      <button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-label="فتح القائمة"><span>☰</span></button>
+    </div>
+  </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="قائمة الهاتف" hidden>
+    <a href="#home">الرئيسية</a><a href="#directory">الدليل</a><a href="#map-section">الخريطة</a><a href="#discover">اكتشف بيلا</a><a href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">بيلا على Google Maps ↗</a>
+  </nav>
+
+  <main id="main">
+    <section id="home" class="hero-section">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> دليلك المحلي في مكان واحد</div>
+        <h1>كل حاجة في بيلا،<br><em>أقرب ليك.</em></h1>
+        <p>دليلك الرقمي لخدمات وأماكن مدينة ومركز بيلا.<br class="desktop-only"> ابحث، اكتشف، وافتح طريقك بخطوة واحدة.</p>
+        <form id="search-form" class="search-bar" role="search">
+          <span aria-hidden="true" class="search-icon">⌕</span>
+          <label class="sr-only" for="main-search">ابحث عن مكان أو خدمة</label>
+          <input id="main-search" type="search" placeholder="بتدور على إيه في بيلا؟" autocomplete="off">
+          <button type="submit">ابحث <span aria-hidden="true">←</span></button>
+        </form>
+        <div class="quick-searches"><span>جرّب:</span><button type="button" data-search="أبو غنام">مسجد أبو غنام</button><button type="button" data-search="الضرائب">الضرائب</button><button type="button" data-search="بيلا">بيلا</button></div>
+        <div class="hero-trust"><span class="avatars" aria-hidden="true"><b>ب</b><b>ي</b><b>ل</b></span><span>معلومات محلية مع روابط المصادر</span><span class="trust-dot">•</span><span>اتجاهات مباشرة على Google Maps</span></div>
+      </div>
+      <div class="hero-art" aria-label="رسم توضيحي لبيئة دلتا النيل حول بيلا">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-grid"></div>
+        <div class="map-card">
+          <div class="map-card-head"><span class="map-live"><i></i> مدينة بيلا</span><span>كفر الشيخ</span></div>
+          <div class="mini-map"><img src="./bila-delta.svg" alt="رسم توضيحي لحقول وقناة ماء في دلتا النيل" loading="eager"><a class="mini-map-link" href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">افتح موقع بيلا على Google Maps ↗</a></div>
+          <div class="map-card-foot"><span>رسم فني مستوحى من بيئة الدلتا — الخريطة الفعلية في القسم التالي.</span></div>
+        </div>
+        <div class="float-note note-top"><span>✦</span><div><strong>بيلا</strong><small>محافظة كفر الشيخ</small></div></div>
+        <div class="float-note note-bottom"><span class="nearby-icon">⌖</span><div><strong>دلتا النيل</strong><small>معلَم محلي وتراث حي</small></div></div>
+        <div class="art-spark spark-a">✳</div><div class="art-spark spark-b">✦</div>
+      </div>
+      <div class="hero-bottom"><span>دليلك يبدأ من هنا</span><span class="scroll-line"></span><span>اكتشف الخدمات من حولك</span></div>
+    </section>
+
+    <section class="stats-strip" aria-label="إحصائيات الدليل">
+      <div class="stat-intro"><span class="stat-symbol">✳</span><div><strong>بيلا، بين إيديك</strong><span>من أهلها.. ولأهلها</span></div></div>
+      <div class="stat-item"><strong id="stat-places">—</strong><span>مكان في الدليل</span></div>
+      <div class="stat-item"><strong id="stat-categories">14</strong><span>تصنيف خدمي</span></div>
+      <div class="stat-item"><strong>مصادر</strong><span>لكل معلومة موثقة</span></div>
+      <a class="stat-cta" href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">افتح خريطة بيلا <span>↗</span></a>
+    </section>
+
+    <section id="directory" class="content-section directory-section">
+      <div class="section-heading"><div><span class="section-kicker">الدليل بين إيديك</span><h2>تدور على إيه؟</h2><p>اختار التصنيف، وهتلاقي كل الأماكن المتاحة في بيلا.</p></div><a href="#map-section" class="text-link">افتح الخريطة <span>←</span></a></div>
+      <div id="category-grid" class="category-grid" aria-live="polite"><div class="loading-card">بنجهّز دليل بيلا…</div></div>
+      <div class="results-toolbar">
+        <div><span class="results-dot"></span><strong id="results-title">أماكن مميزة في بيلا</strong><small id="results-count"></small></div>
+        <div class="toolbar-actions"><button id="favorites-button" class="outline-button" type="button"><span>☆</span> المفضلة</button></div>
+      </div>
+      <div id="place-list" class="place-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden><div class="empty-illustration">⌕</div><h3>لا توجد نتائج في هذا التصنيف</h3><p>المعلومات المنشورة حاليًا محدودة، وتُضاف أماكن أخرى بعد توثيق بياناتها.</p><a class="primary-button" href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">افتح خريطة بيلا <span>↗</span></a></div>
+    </section>
+
+    <section id="map-section" class="content-section map-section">
+      <div class="section-heading"><div><span class="section-kicker">خريطة بيلا</span><h2>استكشف موقع المدينة</h2><p>رابط كل جهة يفتح موقعها على Google Maps مباشرة.</p></div><a class="text-link" href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">بيلا على Google Maps <span>↗</span></a></div>
+      <div class="map-shell"><div class="map-tools"><label for="map-filter">اعرض على الخريطة</label><select id="map-filter"><option value="">كل التصنيفات</option></select></div><div id="map" role="application" aria-label="خريطة تفاعلية لمدينة بيلا"></div><div class="map-footnote"><span>الخريطة من OpenStreetMap</span><span id="map-place-count">المواقع ذات الإحداثيات الدقيقة فقط تظهر هنا</span></div></div>
+    </section>
+
+    <section id="discover" class="discover-section">
+      <div class="discover-copy"><span class="section-kicker">حكاية مكان</span><h2>أهلاً بيك<br>في بيلا.</h2><p>بيلا مدينة ومركز في محافظة كفر الشيخ، وبين شوارعها وحكاياتها معالم تستحق التعرف عليها. «بيلا بين إيديك» يجمع روابط الأماكن والمعلومات المحلية في واجهة واحدة.</p><div class="bila-fact"><span class="fact-icon">⌂</span><div><strong>من تراث المدينة</strong><p>مسجد العارف بالله سيدي سالم البيلي أبو غنام يعود إنشاؤه إلى نحو 700هـ. افتُتح بعد أعمال الترميم في فبراير 2025.</p><a href="https://kfs.gov.eg/posts/وسط-فرحة-الأهالي-محافظ-كفرالشيخ-يفتتح-مسجد-أبو-غنام-الأثري-ببيلا-مقدماً-التهنئة-لأبناء-المحافظة-بمناسبة-شهر-رمضان-المبارك" target="_blank" rel="noopener">المصدر: محافظة كفر الشيخ ↗</a></div></div><div class="discover-actions"><a class="light-button" href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">افتح خريطة بيلا على Google Maps <span>↗</span></a><button class="discover-share" id="discover-share" type="button">شارك الحكاية <span>↗</span></button></div><small class="source-note">رابط الخريطة يفتح الموقع الذي شاركته. رسومات الموقع توضيحية وليست صورًا فوتوغرافية للمعالم.</small></div>
+      <div class="discover-visual"><div class="photo-frame heritage-frame"><img src="./abu-ghannam.svg" alt="رسم توضيحي لمعمار مسجد تاريخي، وليس صورة فوتوغرافية لمسجد أبو غنام" loading="lazy"><span class="illustration-label">تصميم توضيحي</span><div class="discover-caption"><span>مسجد تاريخي في بيلا</span><strong>مسجد أبو غنام</strong></div></div><div class="visual-note"><span>⌖</span> بيلا · كفر الشيخ</div></div>
+    </section>
+
+    <section class="emergency-section">
+      <div class="emergency-heading"><span class="emergency-icon">!</span><div><span class="section-kicker">للحالات الطارئة</span><h2>أرقام مهمة.. خليك قريب منها</h2></div></div>
+      <div class="emergency-cards">
+        <a class="emergency-card" href="tel:123"><span class="emergency-symbol">✚</span><span><small>الإسعاف</small><strong>123</strong></span><i>↗</i></a>
+        <a class="emergency-card" href="tel:122"><span class="emergency-symbol">◈</span><span><small>شرطة النجدة</small><strong>122</strong></span><i>↗</i></a>
+        <a class="emergency-card" href="tel:180"><span class="emergency-symbol">♨</span><span><small>الحماية المدنية</small><strong>180</strong></span><i>↗</i></a>
+        <span class="emergency-footnote">الأرقام وفق <a href="https://kfs.gov.eg/index.php/directory" target="_blank" rel="noopener">دليل الخدمات بمحافظة كفر الشيخ</a>. راجعها دوريًا.</span>
+      </div>
+    </section>
+
+    <section class="contribute-section">
+      <div class="contribute-mark">⌖</div><div class="contribute-copy"><span class="section-kicker">بيلا · كفر الشيخ</span><h2>ابدأ رحلتك من خريطة المدينة</h2><p>افتح رابط Google Maps الذي شاركته للتعرّف على موقع بيلا والوصول إليها.</p></div><a class="primary-button" href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">افتح Google Maps <span>↗</span></a><div class="contribute-doodle" aria-hidden="true">بـيـلا</div>
+    </section>
+
+    <section class="how-section"><div class="section-heading"><div><span class="section-kicker">ببساطة</span><h2>من المعلومة لحد باب المكان</h2></div></div><div class="steps"><div class="step"><span>01</span><i>⌕</i><strong>ابحث أو اختار</strong><small>اكتب اسم خدمة أو اختار تصنيف.</small></div><div class="step-line"></div><div class="step"><span>02</span><i>⌖</i><strong>اعرف المكان</strong><small>شوف العنوان والتفاصيل المتاحة.</small></div><div class="step-line"></div><div class="step"><span>03</span><i>↗</i><strong>اتصل أو اتحرك</strong><small>افتح الاتجاهات على خرائط جوجل.</small></div></div></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main"><a class="brand footer-brand" href="#home"><span class="brand-mark"><svg viewBox="0 0 48 48"><path d="M24 4c-9 0-16 7-16 16 0 12 16 24 16 24s16-12 16-24C40 11 33 4 24 4Z"/><circle cx="24" cy="20" r="6"/></svg></span><span><strong>بيلا بين إيديك</strong><small>امسح • اكتشف • وصل</small></span></a><p>دليل رقمي لمدينة ومركز بيلا.<br>معلومات محلية مع روابط مباشرة ومصادرها.</p><div class="footer-links"><a href="#directory">الدليل</a><a href="#map-section">الخريطة</a><a href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener">بيلا على Google Maps ↗</a><button id="qr-open" type="button">رمز QR</button></div></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> بيلا بين إيديك · مجموعة المستقبل – بيلا</span><span><i class="footer-dot"></i> تُضاف المعلومات بعد توثيقها</span></div>
+  </footer>
+  <nav class="mobile-bottom-nav" aria-label="تنقل سريع"><a href="#home"><span>⌂</span><small>الرئيسية</small></a><a href="#directory"><span>▦</span><small>الدليل</small></a><a href="#map-section"><span>⌖</span><small>الخريطة</small></a><a href="https://maps.app.goo.gl/c5wqJjDN22RCpNiFA?g_st=aw" target="_blank" rel="noopener"><span>↗</span><small>Google Maps</small></a></nav>
+
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="./static-data.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

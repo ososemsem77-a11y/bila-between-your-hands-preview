@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">رسم توضيحي لمبنى خدمة حكومية محلية</title>
+  <desc id="desc">واجهة مرسومة لمبنى إداري بألوان هادئة وساحة خضراء، وليست صورة لمأمورية الضرائب.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#bbd5d2"/><stop offset="1" stop-color="#f2e8d0"/></linearGradient>
+    <linearGradient id="facade" x2="0" y2="1"><stop stop-color="#f3e8ce"/><stop offset="1" stop-color="#d1bb92"/></linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/><circle cx="920" cy="142" r="66" fill="#f5d990"/>
+  <path d="M0 594h1200v166H0z" fill="#94a982"/>
+  <path d="M170 595V285h860v310z" fill="url(#facade)" stroke="#9c8765" stroke-width="10"/>
+  <path d="M138 289 600 157l462 132z" fill="#b69d72" stroke="#8f7956" stroke-width="10"/>
+  <path d="M184 294h832M206 338h788" stroke="#fff7e7" stroke-width="8" opacity=".65"/>
+  <g fill="#758a70" stroke="#8f7956" stroke-width="8">
+    <path d="M245 390h102v126H245zM420 390h102v126H420zM678 390h102v126H678zM853 390h102v126H853z"/>
+  </g>
+  <g fill="#d9e3d7" opacity=".8"><path d="M258 404h76v58h-76zM433 404h76v58h-76zM691 404h76v58h-76zM866 404h76v58h-76z"/></g>
+  <path d="M540 595V414q0-54 60-54t60 54v181z" fill="#786a51" stroke="#9b835d" stroke-width="9"/>
+  <path d="M0 629q250-42 440 0t760-8v139H0z" fill="#d5c9a4" opacity=".65"/>
+  <g fill="#4f7858"><path d="M92 596v-82h17v82zM68 519q33-51 66 0q-33 8-66 0z"/><path d="M1087 596v-92h19v92zM1061 511q36-53 73 0q-37 8-73 0z"/></g>
+  <text x="600" y="705" text-anchor="middle" fill="#fdf9ed" font-family="Tahoma, sans-serif" font-size="26" font-weight="700">تصميم توضيحي — ليس صورة للمبنى</text>
+</svg>
